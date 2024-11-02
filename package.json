@@ -1,0 +1,33 @@
+{
+  "name": "learning-full-stack",
+  "version": "1.0.0",
+  "description": "Follows the The Complete Developer book by No Start Press",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julillermo/Learning-Full-Stack.git"
+  },
+  "keywords": [
+    "Full-Stack",
+    "Backend",
+    "Frontend",
+    "Middleware",
+    "Node",
+    "Express",
+    "MongoDb",
+    "Mongoose",
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "NextJs"
+  ],
+  "author": "TulioG_Projects",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julillermo/Learning-Full-Stack/issues"
+  },
+  "homepage": "https://github.com/julillermo/Learning-Full-Stack#readme"
+}
