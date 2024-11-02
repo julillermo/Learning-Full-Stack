@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/julillermo/Learning-Full-Stack/issues"
   },
-  "homepage": "https://github.com/julillermo/Learning-Full-Stack#readme"
+  "homepage": "https://github.com/julillermo/Learning-Full-Stack#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }
