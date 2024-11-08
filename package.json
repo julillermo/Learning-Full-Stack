@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && tsc-alias --resolve-full-paths",
-    "start": "node ./dist/The_Technology_Stack/1_2_3_ExpressJs_server/index.js"
+    "start": "node ./dist/The_Technology_Stack/ExpressJs_server/index.js && bash ./src/The_Technology_Stack/React-FE/scripts/start.sh"
   },
   "repository": {
     "type": "git",
