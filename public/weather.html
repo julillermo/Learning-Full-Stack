@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Component</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function App() {
+        const WeatherComponent = (props) => {
+          const [count, setCount] = React.useState(0);
+          React.useEffect(() => {
+            setCount(1);
+          }, []);
+
+          return (
+            <h1 onClick={() => setCount(count + 1)}>
+              The weather is {props.weather}, and the counter shows {count}
+            </h1>
+          );
+        };
+      }
+
+      // The following code is actually what's used in Vite.js
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+    </script>
+  </body>
+</html>
+
+<!-- 
+  Technically this is also what Vite.js does.
+  Vite has an `index.html` file at the root that points to `src/main.tsx`
+  The `src/main.tsx` file acts like script that execuutes the following code:
+
+  createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+
+  This approach doesn't provide intellisense support, however, because we're
+  directly inluding inside an html file.
+
+  This file doesn't work because of (what I assume) restricted access to
+    some resources that prevent me from rendering the react component
+-->

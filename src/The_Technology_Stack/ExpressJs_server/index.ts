@@ -11,8 +11,10 @@
 // *  the specified callback function
 
 // The automatic imports without file extensions only works with .ts files?
-import { routeHello, routeAPINames, routeWeather } from "./routes";
 import express, { Request, Response } from "express";
+var cors = require("cors");
+import path from "node:path";
+import { routeAPINames, routeHello, routeWeather } from "./routes";
 
 const server = express();
 const port = 3000;
@@ -51,7 +53,15 @@ server.get("/api/weather/:zipcode", (req: Request, res: Response) => {
   res.send(response);
 });
 
+// /components/weather
+server.get("/components/weather", (req: Request, res: Response) => {
+  const filePath = path.join(process.cwd(), "public/weather.html");
+  res.setHeader("Content-Type", "text/html");
+  res.sendFile(filePath);
+});
+
 // Turn on the port on localhost:3000/
+server.use(cors());
 server.listen(port, () => {
   console.log("Listening on " + port);
 });
