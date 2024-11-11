@@ -54,8 +54,9 @@ server.get("/api/weather/:zipcode", (req: Request, res: Response) => {
 });
 
 // /components/weather
-server.get("/components/weather", (req: Request, res: Response) => {
+server.get("/components/weather", (_req: Request, res: Response) => {
   const filePath = path.join(process.cwd(), "public/weather.html");
+  console.log("filePath", filePath);
   res.setHeader("Content-Type", "text/html");
   res.sendFile(filePath);
 });
