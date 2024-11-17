@@ -9,20 +9,6 @@ import type {
   PreviewData,
 } from "next";
 
-// const NamesSSR: NextPage = (
-//   props: InferGetServerSidePropsType<typeof getServerSideProps>
-// ) => {
-//   const output = props.names.map((item: ResponseItemType, idx: number) => {
-//     return (
-//       <li key={`name=${idx}`}>
-//         {item.id} : {item.name}
-//       </li>
-//     );
-//   });
-
-//   return <ul>{output}</ul>;
-// };
-
 function NamesSSR(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
