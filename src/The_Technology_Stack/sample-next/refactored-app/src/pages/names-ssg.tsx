@@ -16,6 +16,7 @@ function NamesSSG(props: InferGetStaticPropsType<typeof getStaticProps>) {
 }
 
 export async function getStaticProps(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
 ) {
   let names: ResponseItemType[] | [] = [];

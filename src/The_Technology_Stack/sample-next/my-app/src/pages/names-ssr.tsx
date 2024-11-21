@@ -22,7 +22,7 @@ function NamesSSR(
 }
 
 export const getServerSideProps: GetServerSideProps = async (
-  _context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
+  z_context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
 ) => {
   let names: ResponseItemType[] | [] = [];
   try {

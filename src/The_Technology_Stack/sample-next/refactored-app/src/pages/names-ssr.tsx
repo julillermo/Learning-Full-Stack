@@ -22,6 +22,7 @@ function NamesSSR(
 }
 
 export const getServerSideProps: GetServerSideProps = async (
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
 ) => {
   let names: ResponseItemType[] | [] = [];
