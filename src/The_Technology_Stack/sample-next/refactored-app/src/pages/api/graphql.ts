@@ -3,6 +3,7 @@ import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { resolvers } from "@/grahpql/resolvers";
 import { typeDefs } from "@/grahpql/schema";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import dbConnect from "../../../middleware/db-connect";
 
 const server = new ApolloServer({
   resolvers,
@@ -32,4 +33,12 @@ const allowCors =
     return await fn(req, res);
   };
 
-export default allowCors(handler);
+// Essentially just acts as a wrapper that first connects to the databse
+//    whenever an API call is made
+const connectDB =
+  (fn: NextApiHandler) => async (req: NextApiRequest, res: NextApiResponse) => {
+    await dbConnect();
+    return await fn(req, res);
+  };
+
+export default connectDB(allowCors(handler));
