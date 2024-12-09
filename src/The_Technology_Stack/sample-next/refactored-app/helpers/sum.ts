@@ -1,3 +1,3 @@
-export function sum (numbers: number[]) {
-  // return numbers.reduce((acc, curr) => acc + curr, 0)
+export function sum(data: number[]) {
+  return data.reduce((a, b) => a + b);
 }
