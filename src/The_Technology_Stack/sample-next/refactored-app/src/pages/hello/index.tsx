@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { JSX } from "react";
 
 const Hello: NextPage = (): JSX.Element => {
   return (
