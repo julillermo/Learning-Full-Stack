@@ -8,8 +8,10 @@ describe("The fibonacci sequence", () => {
   });
 
   test("with a length of 5 is '0, 1, 1, 2, 3' ", () => {
-    // For when the stub is () => 999;
+    // For when the dependency double is a STUB of () => 999;
     // expect(fibonacci(5)).toBe("999, 999, 999, 999, 999");
-    // expect(fibonacci(5)).toBe("0, 1, 1, 2, 3");
+
+    // For when the dependency double is a FAKE fn
+    expect(fibonacci(5)).toBe("0, 1, 1, 2, 3");
   });
 });
