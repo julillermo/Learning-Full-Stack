@@ -2,7 +2,7 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import { storeDocument } from "../mongoose/weather/services";
 
-async function dbConnect(): Promise<void | string> {
+async function dbConnect(): Promise<void | string | MongoMemoryServer> {
   // create a MongoMemoryServer instance to persist data per session
   const mongoServer = await MongoMemoryServer.create();
   // identify the connection string to the server
@@ -14,6 +14,7 @@ async function dbConnect(): Promise<void | string> {
     dbName: "Weather",
   });
 
+  // Example data to include in memory for testing
   await storeDocument({
     zip: "96815",
     weather: "sunny",
@@ -35,6 +36,8 @@ async function dbConnect(): Promise<void | string> {
     tempF: "86F",
     friends: ["96815", "96814"],
   });
+
+  return mongoServer;
 }
 
 export default dbConnect;
