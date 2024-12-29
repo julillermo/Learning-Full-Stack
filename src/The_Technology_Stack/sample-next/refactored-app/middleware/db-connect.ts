@@ -40,4 +40,6 @@ async function dbConnect(): Promise<void | string | MongoMemoryServer> {
   return mongoServer;
 }
 
+// The dbConnect() function is currently used by the
+//    [...zipcode].ts API endpoint API
 export default dbConnect;

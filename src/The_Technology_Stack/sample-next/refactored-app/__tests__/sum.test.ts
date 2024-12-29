@@ -1,7 +1,9 @@
 import { sum } from "../helpers/sum";
 
+// it() is an alias for test()
+
 describe("the sum function", () => {
-  test("two pluse two is four", () => {
+  it("should return 4 when 2 plus 2", () => {
     // * Verbose version
     // const first = 2;
     // const second = 2;
@@ -13,7 +15,7 @@ describe("the sum function", () => {
     expect(sum([2, 2])).toBe(4);
   });
 
-  test("minus eight plus four is minus four", () => {
+  it("should return -4 when -8 + 4", () => {
     // * Verbose version
     // const first = -8;
     // const second = 4;
@@ -21,10 +23,11 @@ describe("the sum function", () => {
     // const result = sum(first, second);
     // expect(result).toBe(expectation);
 
+    // * Concise version
     expect(sum([-8, 4])).toBe(-4);
   });
 
-  test("two plus two plus minus four is zero", () => {
+  it("should return 0 when 2 + 2 - 4", () => {
     expect(sum([2, 2, -4])).toBe(0);
   });
 });

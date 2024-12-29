@@ -1,7 +1,6 @@
 /**
  * @jest-environment node
  */
-
 import dbConnect from "../../middleware/db-connect";
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
@@ -9,7 +8,7 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 describe("dbConnect", () => {
   let connection: string | void | MongoMemoryServer;
 
-  // Gets called after each test case.
+  // Gets called to clear the mocks each test case.
   // Otherwise, spies would report information from
   //    previous tests.
   afterEach(async () => {
