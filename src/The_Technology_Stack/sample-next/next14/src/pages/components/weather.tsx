@@ -20,7 +20,7 @@ function WeatherComponent(props: WeatherProps): JSX.Element {
 
   return (
     <h1 onClick={handleClick}>
-      The wather is {props.weather}, and the counter shows {count}
+      The weather is {props.weather}, and the counter shows {count}
     </h1>
   );
 }
