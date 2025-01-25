@@ -5,7 +5,7 @@ import { fibonacci } from "../helpers/fibonacci";
 jest.mock("../helpers/sum");
 
 describe("The fibonacci sequence", () => {
-  test("with a length of 0 is ,", () => {
+  test("with a length of 0 is '0',", () => {
     expect(fibonacci(0)).toBe("");
   });
 

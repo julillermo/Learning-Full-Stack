@@ -46,6 +46,8 @@ server.get(
 
 // /api/weather/:zipcode
 // The colon ":" creates a parameter on the request's `params` object
+// Note that this may be specific to express. Other server frameworks may
+//    do this differently
 server.get("/api/weather/:zipcode", (req: Request, res: Response) => {
   const response = routeWeather({
     zipcode: req.params.zipcode, // specified through the api endpoint (link above)
