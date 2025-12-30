@@ -5,9 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && tsc-alias --resolve-full-paths",
-    "start": "concurrently \"./src/The_Technology_Stack/React-FE/scripts/start.sh\" \"node ./dist/The_Technology_Stack/ExpressJs_server/index.js\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -34,13 +32,7 @@
   },
   "homepage": "https://github.com/julillermo/Learning-Full-Stack#readme",
   "dependencies": {
-    "express": "5.0.1",
-    "node-fetch": "^3.3.2"
+    "concurrently": "^9.1.0"
   },
-  "devDependencies": {
-    "@types/express": "^5.0.0",
-    "concurrently": "^9.1.0",
-    "tsc-alias": "^1.8.10",
-    "typescript": "^5.6.3"
-  }
+  "devDependencies": {}
 }

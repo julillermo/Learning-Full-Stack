@@ -4,11 +4,11 @@ type responseItemType = {
 };
 
 type WeatherDetailType = {
-  zipcode: string;
+  zipcode: string | undefined;
   weather: string;
   temp?: number;
 };
 
 interface WeatherQueryInterface {
-  zipcode: string;
+  zipcode: string | undefined;
 }
