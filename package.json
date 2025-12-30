@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/julillermo/Learning-Full-Stack#readme",
   "dependencies": {
-    "concurrently": "^9.1.0"
-  },
-  "devDependencies": {}
+    "concurrently": "^9.2.1"
+  }
 }
