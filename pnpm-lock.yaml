@@ -52,7 +52,7 @@ importers:
         specifier: ^8.11.0
         version: 8.51.0(eslint@9.39.2)(typescript@5.6.3)
       vite:
-        specifier: ^5.4.10
+        specifier: ^5.4.21
         version: 5.4.21(@types/node@24.10.4)
 
   passthroughs/2025/js-server:
