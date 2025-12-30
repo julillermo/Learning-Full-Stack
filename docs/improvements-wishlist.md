@@ -10,7 +10,7 @@
   - [Bun](https://bun.sh/) or [Deno](https://deno.com/)
   - [Vite](https://vite.dev/)
   - [Vitest](https://vitest.dev/)
-  - [Astro.js](https://astro.build/)
+  - [Astro.js](https://astro.build/) or [TanStack Start](https://tanstack.com/start/latest)
   - [SQLite](https://sqlite.org/index.html)
   - [Hono](https://hono.dev/)
   - [Podman](https://podman.io/)

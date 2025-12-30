@@ -11,6 +11,7 @@
     - `package-lock.json` file
   - Creating a project
     - `npm init`
+    - `npm audit` and `npm audit fix`
 
 # Individual notes:
 
