@@ -1,4 +1,5 @@
-# Notes:
+# General notes:
+
 - Generally covers that basics that I've learned hands-on at my professional developer role.
 - This chapter covers:
   - How to install Node.js (recommends LTS)
@@ -17,9 +18,12 @@
     - `npm instal`
     - `npx`
       - first check OS environment or local project.
+
+# Specific notes:
+
 - The `package-lock.json` is meant to address the way npm only notes the major versions when installing a fresh project (?). This is somehow meant to address that by allowing npm to create an exact clone of the setup.
 
-# 2026 Revisit Deviations:
+# 2026 Revisit Deviations
 - Used Hono instead of Express.js.
   - Hono no longer needs the code that "listens" on a specific port. 
   - Instead of `(req, res) => {...}`, Hono uses `(c) => {...}` where `c` likely stands for context.
