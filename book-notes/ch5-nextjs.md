@@ -1,0 +1,60 @@
+# Notes:
+
+- Next.js is a meta-framework that orchestrates a lot of pieces for you:
+  - frontend
+  - middleware
+  - backend
+  - native CSS modules
+  - custom Next Modules
+    - image handling
+    - other frontend utilites
+  - built-in server
+- This discussion covers the following for Next.js:
+  - file-based routing
+  - CSS styling
+  - rendering paradigms (SPA, SSR, etc.)
+- The book recommends using the `create-next-app` cli command.
+- The `public` folder contains static assets (fonts, images, files for download).
+- The book considers "App Router" to be a more complex concept.
+- The `_app.tsx` file is Next.js' equivalent to `App.tsx` (from other React implementations or via hand-rolled setup).
+  - Global styles, components, and context providers should be added here.
+  - The `styles` folder covers both global styles as well as module specific styles
+- Caveats to API routes
+  - do not specify _Cross-Origin Resource Sharing (CORS)_ header (must be handled separately or via external package/plugin)
+  - The `next export` doesn't cover Next.js' API routes.
+  - Similar backend server frameworks like Express, Fastify, and Hono, the built-in Next.js server also supports dynamic routes.
+    - This is done by enclosing the file name with brackets, e.g. `[id].ts`. For a "Catch-All" route, use add ellipses, e.g. `[...id].ts`.
+- Styling
+  - **Global Styles** affects all pages of an app.
+    - Aren't modified during build and retian their classnames
+  - **Component / Module Styles**
+    - These class names get modified. Therefore, they must be imported and use as JS objercts.
+- Built-in Next.js Components
+  - `<Head></Head>` from "next/head"
+  - `<Link></Link>` from "next/link"
+  - `<Image/>` from "next/image"'
+- Pre-rendering and Publishing (different ways to render and public a Next.js application). This is specified per page on Next.js.
+  - _Static Site Generation (SSG)_
+    - generates HTML files only once and resuses them for every request.
+    - recommended becuase easy to cache and quick to deliver
+    - usually quicker _time to first paint_ and less _blocking time_
+    - increases SEO rankings (but SSR is also good for SEO)
+    - You can still call on to external data using `getStaticProps`, but make sure that the data aligns with how they're intended to be used in the UI.
+  - _Server-Side Rendering (SSR)_
+    - export the function `getServerSideProps` as part of the page
+  - _Incremental Static Regeneration (ISR)_
+    - Hybrid of SSG and SSR.
+    - From what I understand, this is the same concept as ["hydration"](<https://en.wikipedia.org/wiki/Hydration_(web_development)>) where a minimal HTML is sent first, followed by JS logic that "hydrates" interactivity into the page.
+    - this is achieved by sending the `revalidate: number` prop as part of ISR `getStaticProps`. This will "invalidate" the HTML after 30 seconds from the first page request.
+  - _Client-Side Rendering (CSR)_
+    - Use the component as is (no serverside props, etc.)
+    - The `getStaticProps` and `getServerSideProps` aren't used here.
+    - Fetching data is performed as part of the component. Note that data drawn on first load was previously done by `getStaticProps` and `getServerSideProps` for SSR, SSG, and ISR
+  - `next export`
+    - creates a complete static export of the project
+    - I didn't get into this
+
+# 2026 Revisit Deviations:
+
+- I installed v14 of Next, as this was the latest version to have least likely been affected by the [React2Shell CVE](https://react2shell.com/).
+- I just copy pasted the csr, ssg, and ssr from the 2025 passthrough
