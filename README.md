@@ -18,6 +18,17 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
 - [React-FE](#react-fe)
 - [my-app](#my-app)
 
+**Technologies toched on (to varying degrees) during the 2026 revisit:**
+
+- Bun
+- Concurrently
+- Fastify
+- Hono
+- Node
+- Rimraf
+- Typescript
+- Zod (@hono/zod-validator)
+
 # Planned improvements for my 2026 revisit and continuation:
 
 - [ ] Revisit the applications created in 2025, but skip the part that includes GraphQL and MongoDb for when I will go over them again in the book.
