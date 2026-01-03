@@ -22,6 +22,8 @@
   - The example for using `.d.ts` files is located here as well as the [hono-server](../passthroughs/2026/hono-server/src/index.ts).
 - Fastify specific learning:
   - Parameter types are explicitly declared as part of the HTTP command refer to code example 1.
+- Hono specific learning:
+  - Unlike fastify that has type validation (or assertion?) built-in you'll likely use something like [@hono/zod-validator](https://github.com/honojs/middleware). Refer to code example 2.
 
 # Code examples:
 
@@ -38,4 +40,28 @@ fastify.get <
     let response = routeWeather({ zipcode });
     return response;
   });
+```
+
+```js
+// code_example_2
+import { zValidator } from "@hono/zod-validator";
+import { Hono } from "hono";
+import * as z from "zod";
+import { routeWeather } from "./routes";
+
+const app = new Hono();
+
+app.get(
+  "/api/weather/:zipcode",
+  zValidator(
+    "param",
+    z.object({
+      zipcode: z.string(),
+    })
+  ),
+  async (c) => {
+    const { zipcode } = c.req.valid("param");
+    return c.json(routeWeather({ zipcode }));
+  }
+);
 ```
