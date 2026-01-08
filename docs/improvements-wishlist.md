@@ -7,7 +7,9 @@
 
 - [ ] Revisit the applications created in 2025, but skip the part that includes GraphQL and MongoDb for when I will go over them again in the book.
 - [ ] Continue the read through of the book up to Part II. From what I recall, my 2025 pass of the book only covered Part I and only lightly touched on Part II where book covers creating "The Food Finder" Application.
-- [ ] Reacreate the "The Food Finder" application using a different stack, and possibly diverge from the book and continue it as it's own standalone project. Current technology stack wishlist
+- [ ] Reacreate the "The Food Finder" application using a different stack, and possibly diverge from the book and continue it as it's own standalone project.
+- [ ] Current technology stack wishlist:
+  - [Biome](https://biomejs.dev/)
   - [Bun](https://bun.sh/)
   - [Hono](https://hono.dev/)
   - [OpenAuth](https://openauth.js.org/)
@@ -20,13 +22,7 @@
   - [tRPC](https://trpc.io/)
   - [Vite](https://vite.dev/)
   - [Vitest](https://vitest.dev/)
-  - [Astro.js](https://astro.build/) or [TanStack Start](https://tanstack.com/start/latest)
-  - [SQLite](https://sqlite.org/index.html)
-  - [Hono](https://hono.dev/)
-  - [Podman](https://podman.io/)
-  - [Biome](https://biomejs.dev/)
-  - [OpenAuth](https://openauth.js.org/)
-- [ ] To prepare for the above, I plan to already attempt to recreate the examples provided in the book with the above stack in my 2026 revisit, where possible. I may have already gained experience through my professional work where I go less into detail during my passthrough.
+- [ ] To prepare for the above, I plan to already attempt to recreate the examples provided in the book with the above stack in my 2026 revisit, where possible.
 
 ## Other ideas
 

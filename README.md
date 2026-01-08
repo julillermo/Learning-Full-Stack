@@ -12,20 +12,25 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
 **Outline:**
 
 1. [Planned improvements for 2026 revisit](#planned-improvements-for-my-2026-revisit-and-continuation)
-2. [2025 passthrough guide](#2025-passthrough-guide)
+2. [2025 passthrough guide](#2025-passthrough-guide):
+   - [js-server](#js-server)
+   - [React-FE](#react-fe)
+   - [my-app](#my-app)
 
-- [js-server](#js-server)
-- [React-FE](#react-fe)
-- [my-app](#my-app)
-
-**Technologies touched on (to varying degrees) during the 2026 revisit:**
+**Technologies / packages touched on (to varying degrees) during the 2026 revisit:**
 
 - Bun
+- Biome
 - Concurrently
 - Fastify
+- GraphQL (via Apollo)
 - Hono
+- Next
 - Node
 - Rimraf
+- TanStack
+  - Start
+  - Query
 - Typescript
 - Zod (@hono/zod-validator)
 
@@ -33,7 +38,9 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
 
 - [ ] Revisit the applications created in 2025, but skip the part that includes GraphQL and MongoDb for when I will go over them again in the book.
 - [ ] Continue the read through of the book up to Part II. From what I recall, my 2025 pass of the book only covered Part I and only lightly touched on Part II where book covers creating "The Food Finder" Application.
-- [ ] Recreate the "The Food Finder" application using a different stack, and possibly diverge from the book and continue it as it's own standalone project. Current technology stack wishlist
+- [ ] Recreate the "The Food Finder" application using a different stack, and possibly diverge from the book and continue it as it's own standalone project.
+- [ ] Current technology stack wishlist:
+  - [Biome](https://biomejs.dev/)
   - [Bun](https://bun.sh/)
   - [Hono](https://hono.dev/)
   - [OpenAuth](https://openauth.js.org/)
@@ -46,13 +53,7 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
   - [tRPC](https://trpc.io/)
   - [Vite](https://vite.dev/)
   - [Vitest](https://vitest.dev/)
-  - [Astro.js](https://astro.build/) or [TanStack Start](https://tanstack.com/start/latest)
-  - [SQLite](https://sqlite.org/index.html)
-  - [Hono](https://hono.dev/)
-  - [Podman](https://podman.io/)
-  - [Biome](https://biomejs.dev/)
-  - [OpenAuth](https://openauth.js.org/)
-- [ ] To prepare for the above, already attempt to recreate the examples provided in the book with the above stack where possible. I am somewhat already familiar with some concepts or technologies through my experience at work, and I may safely give them less emphasis.
+- [ ] To prepare for the above, I plan to already attempt to recreate the examples provided in the book with the above stack in my 2026 revisit, where possible.
 
 A more complete list of potential ideas to pick up can be found in the [Improvements wishlist](/docs/improvements-wishlist.md) docs.
 

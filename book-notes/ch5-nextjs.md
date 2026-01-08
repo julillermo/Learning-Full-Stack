@@ -57,4 +57,4 @@
 # 2026 Revisit Deviations:
 
 - I installed v14 of Next, as this was the latest version to have least likely been affected by the [React2Shell CVE](https://react2shell.com/).
-- I just copy pasted the csr, ssg, and ssr from the 2025 passthrough
+- I just copy pasted the csr, ssg, and ssr from the 2025 passthrough.
