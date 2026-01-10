@@ -23,8 +23,9 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
 - Biome
 - Concurrently
 - Fastify
-- GraphQL (via Apollo)
+- GraphQL (via Apollo Server)
 - Hono
+- MongoDb
 - Next
 - Node
 - Rimraf
