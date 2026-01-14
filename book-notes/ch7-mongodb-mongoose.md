@@ -25,7 +25,7 @@
   - "Mongoose automatically queues the commands and executes them, maintains the connection, and then processes the queue as soon as there is a connection to the database.
 - _Seeding_ the database is for adding additional datasets.
 
-# Important implementation notes:
+# Implementation notes:
 
 - The book uses **MongoDb in-memory implementation** instead of a real database server.
   - Book mentions that this okay for testing but not for deploying to prod (resets when restarts).

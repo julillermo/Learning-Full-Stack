@@ -64,7 +64,7 @@
   - Similarly, REST-API response might not include that specific data that you're looking for based on how the API was set up and regardless of whether that piece of information is relevent to the context of the other data.
   - You essentailly just get what you ask for in a flexible way using GraphQL.
 
-# Important implementation notes:
+# Implementation notes:
 
 - When installing GraphQL, note that you're likely installing an environment that contains a server and a client.
   - Instead of setting up APIs using a node, bun, or a backend framework, we run our GraphQL endpoitns via GraphQL server.
