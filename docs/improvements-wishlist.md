@@ -13,15 +13,19 @@
   - [Bun](https://bun.sh/)
   - [Hono](https://hono.dev/)
   - [OpenAuth](https://openauth.js.org/)
+    - <mark>Similar to tanstack, will attempt this later, likely after ch 10 docker</mark>
   - [Podman](https://podman.io/)
+    - <mark>Similar to tanstack, will attempt this later, likely after ch 10 docker</mark>
   - [SQLite](https://sqlite.org/index.html)
   - [TanStack Start](https://tanstack.com/start/latest) or [Astro.js](https://astro.build/)
     - Went with TanStack Start since the concepts apear to be more trasnferable given that Astro is primarily for SSG, which is more ideal for marketing sites/pages. Will try my best to pick up Astro later, though!
     - <mark>Will pick this up later after I've gone through more of the changes to be made to the next application.</mark>
     - Might also want to learn this separately as it's own repo ([Learning-Tanstack](https://github.com/julillermo/Learning-TanStack))
   - [tRPC](https://trpc.io/)
+    - <mark>Similar to tanstack, will attempt this later, likely after ch 10 docker</mark>
   - [Vite](https://vite.dev/)
   - [Vitest](https://vitest.dev/)
+    - <mark>Similar to tanstack, will attempt this later, likely after ch 10 docker</mark>
 - [ ] To prepare for the above, I plan to already attempt to recreate the examples provided in the book with the above stack in my 2026 revisit, where possible.
 
 ## Other ideas
