@@ -27,9 +27,14 @@
     "typescript-eslint": "^8.46.4",
     "vite": "npm:rolldown-vite@7.2.5"
   },
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:rolldown-vite@7.2.5"
-    }
-  }
+  "files": [
+    "src",
+    "public",
+    "dist",
+    "index.html",
+    "tsconfig.app.json",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "vite.config.ts"
+  ]
 }

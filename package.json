@@ -27,6 +27,11 @@
   ],
   "author": "TulioG_Projects",
   "license": "MIT",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.2.5"
+    }
+  },
   "bugs": {
     "url": "https://github.com/julillermo/Learning-Full-Stack/issues"
   },

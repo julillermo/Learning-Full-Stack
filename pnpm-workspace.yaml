@@ -1,3 +1,7 @@
 packages:
   - "passthroughs/2025/*"
   - "passthroughs/2026/*"
+syncInjectedDepsAfterScripts:
+  - build
+injectWorkspacePackages: true
+# forceLegacyDeploy: true
