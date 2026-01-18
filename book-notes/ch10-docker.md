@@ -38,6 +38,7 @@
     - You also map out the connection via `-p <host_port>:<container_exposed_port>`
     - However, this is only used for first run, you can use this again once a container with the same name already exists.
     - The book recommended a different command, but I prefer this based on what I got from LLM chat.
+    - Note that the same can be achieved through the `docker-compose.yml` file while also grouping the containers together (visually via the Docker GUI)
   - `docker container ls`
     - list active running containers
   - `docker ps -a`
@@ -51,6 +52,22 @@
     - delete a container
   - `docker image rm <image_name>`
     - delete a docker image
+  - `docker compose up`
+    - first specify how the services of your project are divided up via the `docker-compose.yml`.
+    - running the above command actives both containers at the same time (creates if not yet existing) and even provides a `concurrently`-like output to the terminal where the logs of both sub-applications are shown.
+  - `docker compose kill` or `docker compose down` (more gentle shutdown)
+    - to shutdown the containers.
+- _Microservices with Docker Componse_
+  - _microservices_ - small, autonomous, units
+  - In contrast to a monolith, a _mircoservice_-driven architecture separates out the parts as their own "application" with dedicated APIs.
+    - I think when people say _monolith_, they mean to say a codebase where a lot of logic is heavily intertwined. From what I understand, a monorepo where sub-applications are already separated out can already emulate the idea of microservices.
+  - _Advantages_
+    - Each service as a defined purpose and idea which allows testing.
+    - A huge project can be broken up and deployed (and maintained) separately (modular). Also allows for multiple instances if necessary.
+    - _FWIU: a docker image/container version of a service taken out of a bigger project would likely already include dependencies as necessary. At least based on what I understand based on the pnpm monorepo docker guide, code imported from other sub-applications would be included in the final output docker image_
+    - Can have dedicated teams assigned to a specific service only. They can come up with an antirely different stack as long as the communicate how they expose their APIs
+- _docker-compose.yml_
+  - sets properties, dependencies, and volumes for each service
 
 # 2026 Revisit Deviations:
 
@@ -61,7 +78,8 @@
     - The above references the `pnpm deploy` [link](https://pnpm.io/cli/deploy) and `pnpm install --frozen-lockfile` [link](https://pnpm.io/cli/install) commands.
   - I think this is because pnpm monorepo/workspace projects are built in a specific way that considers all the sub-applications.
     - From what I understand what the documentation describes, I should have a build step and then specify the instructions for each sub-app (including copying what it needs from the build-step). Refer to the example code as well as the project [dockerfile](../Dockerfile)
-- There's some additional considerations such as being able to share or restrict file access via volumnes, but I didn't go over this.
+- There's some additional considerations such as being able to share or restrict file access via volumes, but I didn't go over this.
+- I didn't do the part where the book tested while running via `docker compose up`
 
 # Example code
 
