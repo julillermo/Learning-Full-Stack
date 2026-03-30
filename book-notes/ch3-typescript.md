@@ -1,15 +1,15 @@
 # Notes:
 
 - Weaknesses of JavaScript:
-  - weakly typed (can convert types into one another)
-  - dynamically type (types aren't explicitly stated on variable initialization)
+  - **weakly typed** (can convert types into one another)
+  - **dynamically type** (types aren't explicitly stated on variable initialization)
   - troublesome when handling third-party APIs (due to lack fo strict types)
-- Being a _statically_ type language, TypeScript performs type checks before runtime via the code edotor or IDE.
+- Being a **statically type language**, TypeScript performs type checks before runtime via the code edotor or IDE.
   - The introduction of [ts-go](https://devblogs.microsoft.com/typescript/typescript-native-port/) should make this step a whole lot faster when it releases in Typescript 7.0.
   - Even when you're just using JS, you still using TypeScript via VSCode. However, I'm not sure how this is done in other IDEs and code editors.
-- TypeScript _transpiles_ the `.ts` files into the equivalent `.js` code depending on your `tsconfig.json`.
-  - Auto-generate a `tsconfig.json` (which can be modified later using the `tsc -init` command after running `npm install -D typescript`)
-- Generally, install TypeScript as a devDependency.
+- TypeScript _transpiles_ the `.ts` files into the equivalent `.js` code according to your `tsconfig.json`.
+  - Auto-generate a `tsconfig.json` using the `tsc -init` comamnd after running `npm install -D typescript`. The `tsconfig.json` can be modified later.
+- TypeScript is commonly installed as a **devDependency**.
 - I skipped the "Built-in Types" section as I believe I should have some base knowledge if this from my professional experience.
 - Generally skipped over "Custom Types" as well:
   - From what I recall `interface` is like `types`, but can be modified later on using the same interface name.
@@ -57,11 +57,11 @@ app.get(
     "param",
     z.object({
       zipcode: z.string(),
-    })
+    }),
   ),
   async (c) => {
     const { zipcode } = c.req.valid("param");
     return c.json(routeWeather({ zipcode }));
-  }
+  },
 );
 ```
