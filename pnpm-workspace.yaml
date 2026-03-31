@@ -1,7 +1,8 @@
 packages:
-  - "passthroughs/2025/*"
+  - "!passthroughs/2025/*"
   - "passthroughs/2026/*"
 syncInjectedDepsAfterScripts:
   - build
+minimumReleaseAge: 4320
 injectWorkspacePackages: true
 # forceLegacyDeploy: true
