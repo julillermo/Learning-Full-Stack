@@ -5,7 +5,7 @@
   - middleware
   - backend
   - native CSS modules
-  - custom Next Modules
+  - custom Next Modules & React components
     - image handling
     - other frontend utilites
   - built-in server
@@ -20,9 +20,9 @@
   - Global styles, components, and context providers should be added here.
   - The `styles` folder covers both global styles as well as module specific styles
 - Caveats to API routes
-  - do not specify _Cross-Origin Resource Sharing (CORS)_ header (must be handled separately or via external package/plugin)
-  - The `next export` doesn't cover Next.js' API routes.
-  - Similar backend server frameworks like Express, Fastify, and Hono, the built-in Next.js server also supports dynamic routes.
+  - Next.js does not specify _Cross-Origin Resource Sharing (CORS)_ header (must be handled separately or via external package/plugin)
+  - The `next export`, a way to bundle the application, doesn't cover Next.js' API routes.
+  - Similar to other backend server frameworks like Express, Fastify, and Hono, the built-in Next.js server also supports dynamic routes.
     - This is done by enclosing the file name with brackets, e.g. `[id].ts`. For a "Catch-All" route, use add ellipses, e.g. `[...id].ts`.
 - Styling
   - **Global Styles** affects all pages of an app.
@@ -34,19 +34,19 @@
   - `<Link></Link>` from "next/link"
   - `<Image/>` from "next/image"'
 - Pre-rendering and Publishing (different ways to render and public a Next.js application). This is specified per page on Next.js.
-  - _Static Site Generation (SSG)_
+  - **Static Site Generation (SSG)**
     - generates HTML files only once and resuses them for every request.
     - recommended becuase easy to cache and quick to deliver
-    - usually quicker _time to first paint_ and less _blocking time_
+    - usually quicker **time to first paint** and less _blocking time_
     - increases SEO rankings (but SSR is also good for SEO)
     - You can still call on to external data using `getStaticProps`, but make sure that the data aligns with how they're intended to be used in the UI.
-  - _Server-Side Rendering (SSR)_
+  - **Server-Side Rendering (SSR)**
     - export the function `getServerSideProps` as part of the page
-  - _Incremental Static Regeneration (ISR)_
+  - **Incremental Static Regeneration (ISR)**
     - Hybrid of SSG and SSR.
     - From what I understand, this is the same concept as ["hydration"](<https://en.wikipedia.org/wiki/Hydration_(web_development)>) where a minimal HTML is sent first, followed by JS logic that "hydrates" interactivity into the page.
     - this is achieved by sending the `revalidate: number` prop as part of ISR `getStaticProps`. This will "invalidate" the HTML after 30 seconds from the first page request.
-  - _Client-Side Rendering (CSR)_
+  - **Client-Side Rendering (CSR)**
     - Use the component as is (no serverside props, etc.)
     - The `getStaticProps` and `getServerSideProps` aren't used here.
     - Fetching data is performed as part of the component. Note that data drawn on first load was previously done by `getStaticProps` and `getServerSideProps` for SSR, SSG, and ISR

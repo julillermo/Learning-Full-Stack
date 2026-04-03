@@ -2,24 +2,24 @@
 // GraphQl could have instead connected to a database and pulled info from there
 export const db = [
   {
-    zip: "96815",
+    zip: 96815,
     weather: "sunny",
     tempC: "25C",
     tempF: "70F",
-    friends: ["96814", "96826"],
+    friends: [96814, 96826],
   },
   {
-    zip: "96826",
+    zip: 96826,
     weather: "sunny",
     tempC: "30C",
     tempF: "86F",
-    friends: ["96814", "96815"],
+    friends: [96814, 96815],
   },
   {
-    zip: "96815",
+    zip: 96815,
     weather: "sunny",
     tempC: "20C",
     tempF: "68F",
-    friends: ["96815", "96826"],
+    friends: [96815, 96826],
   },
 ];

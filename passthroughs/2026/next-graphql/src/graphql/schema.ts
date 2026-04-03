@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 export const typeDefs = gql`
   type LocationWeatherType {
-    zip: String!
+    zip: Int!
     weather: String!
     tempC: String!
     tempF: String!
@@ -10,15 +10,15 @@ export const typeDefs = gql`
   }
 
   input LocationWeatherInput {
-    zip: String!
+    zip: Int!
     weather: String
     tempC: String
     tempF: String
-    friends: [String]
+    friends: [Int]
   }
 
   type Query {
-    weather(zip: String): [LocationWeatherType]!
+    weather(zip: Int): [LocationWeatherType]!
   }
 
   type Mutation {

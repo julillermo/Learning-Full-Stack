@@ -2,7 +2,7 @@ import { db } from "./data";
 
 // Note that this matches the schema stated in ./schema.gql.ts
 declare interface WeatherInterface {
-  zip: string;
+  zip: number;
   weather: string;
   tempC: string;
   tempF: string;

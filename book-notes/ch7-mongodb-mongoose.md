@@ -20,8 +20,8 @@
   - documents -> rows
   - records -> SQL table
 - **Querying the Database**
-  - "A _service_ is a function that performs the actual CRUD operations the Mongoose model adn returns the result
-    - If I'm going off of my professional developer experience, a services or service functions are the ones that carry more specific data manipulations/preperations on top of the usually ORM-to-database CRUD commands (`find`, `list`, `create`, `update`, `delete`, etc.)
+  - "A **service** is a function that performs the actual CRUD operations the Mongoose model and returns the result
+    - If I'm going off of my professional developer experience, services or service functions are the ones that carry more specific data manipulations/preperations on top of the usually ORM-to-database CRUD commands (`find`, `list`, `create`, `update`, `delete`, etc.).
   - "Mongoose automatically queues the commands and executes them, maintains the connection, and then processes the queue as soon as there is a connection to the database.
 - _Seeding_ the database is for adding additional datasets.
 
