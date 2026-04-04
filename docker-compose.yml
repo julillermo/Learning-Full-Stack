@@ -1,14 +1,17 @@
+# This method looks for what's specified in the Dockerfile
 version: "3.0"
 services:
   meta-framework:
-    image: nextgraphql:22-bookworm-slim
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: next-graphql
     ports:
       - "3102:3102"
-    volumes:
-      - ./:/home/node/
   frontend-only:
-    image: react-vite:22-bookworm-slim
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: react-vite
     ports:
       - "5173:5173"
-    volumes:
-      - ./:/home/node/
