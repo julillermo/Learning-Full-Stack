@@ -1,0 +1,14 @@
+# docker-compose.yml file for part II
+version: "3.0"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile-part2
+      target: food-finder-mongo-backend
+      restart: always
+      environment:
+        DB_NAME: food-finder
+        MONGO_INITDB_DATABASE: food-finder
+      ports:
+        - "27017:27017"

@@ -4,14 +4,14 @@ services:
   meta-framework:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-part1
       target: next-graphql
     ports:
       - "3102:3102"
   frontend-only:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-part1
       target: react-vite
     ports:
       - "5173:5173"

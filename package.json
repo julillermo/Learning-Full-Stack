@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker": "docker compose up",
-    "docker:rebuild": "docker compose up --build"
+    "docker:part1": "docker compose -f docker-compose-part1 up",
+    "docker:part1:prebuild": "docker compose -f docker-compose-part1 up --build"
   },
   "repository": {
     "type": "git",
