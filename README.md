@@ -36,7 +36,7 @@ Highly recommend frequently visiting [Humble Bundle Books](https://www.humblebun
   - [Bun](https://bun.sh/)
   - [Hono](https://hono.dev/)
   - [Vite](https://vite.dev/)
-  - Will attempt after ch 10 docker (all still tentative)
+  - Will attempt after the end of the project portion (all still tentative)
     - [TanStack Start](https://tanstack.com/start/latest)
       - Might also want to learn this separately as it's own repo ([Learning-Tanstack](https://github.com/julillermo/Learning-TanStack))
     - [SQLite](https://sqlite.org/index.html)
